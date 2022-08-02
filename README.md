@@ -6,19 +6,26 @@
 
 ## Description:
 
+- Web app for viewing trending currencies price, with the ability to see its price in exchange to other currencies. Also, the app have a separate section for financial news.
+
+---
+
+## User Journey:
+
 - When a user enters the website they will see a list of the trending currencies combined with their prices and some additional data.
-  They could search for their preferred currency by typing its name in the search box.
-  The user can convert the price of their preferred currency to other available types of currencies.
-  The user can click on the news section from the navbar, and they will be redirected to the news page.
-  When clicking on the article's title, the user will be redirected to the source page.
+- They could search for their preferred currency by typing its name in the search box.
+- The user can convert the price of their preferred currency to other available types of currencies.
+- The user can click on the news section from the navbar, and they will be redirected to the news page.
+- When clicking on the article's title, the user will be redirected to the source page.
 
 ---
 
 ## User Stories:
 
-- [x] As a user I want to be able to see the trending currencies.
-- [x] As a user I want to be able to search about specific currency.
-- [x] As a user I want to be able to a currencies read news.
+- [x] As a user, I want to be able to see the trending currencies.
+- [x] As a user, I want to be able to search about specific currency.
+- [x] As a user, I want to be able to a currencies read news.
+- [x] As a user, I want to be able to convert between a currencies.
 
 ## Installation
 
