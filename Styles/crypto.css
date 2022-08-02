@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,700&display=swap');
 *{
     font-family: 'Roboto', sans-serif;
+    font-weight: 400;
 }
 
 html {
@@ -12,6 +12,10 @@ html {
 
 body{
     padding: 0 4rem 4rem 4rem;
+}
+
+a{
+    text-decoration: none;
 }
 
 /* Beginning of Header Section */
@@ -36,6 +40,7 @@ body{
 
 .title p{
     font-size: 2rem;
+    font-weight: 900;
 }
 
 .nav-icons{
@@ -52,14 +57,15 @@ body{
 .nav-icons a {
     font-size: 1.6rem;
     margin-right: 3rem;
-    text-decoration: none;
+    font-weight: 900;
     color: black;
 }
 .nav-icons a:hover{
     color: #DF7861;
 }
 .logo{
-    color: #DF7861; 
+    color: #DF7861;
+     font-weight: 900;
 }
 
 /* End of Header Section  */
@@ -112,3 +118,69 @@ body{
 }
 
 /* Table Div */
+table, thead, tr, td {
+    border: 1px solid #CFD2CF;
+    border-collapse: collapse;
+}
+table{
+    width: 100%;
+}
+thead td{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+}
+td{
+    padding: 3rem;
+    font-size: 1.6rem;
+    text-align: center;
+    border-right:1px solid white;
+}
+
+
+
+.table-content{
+    flex-basis: 100%;
+    margin-top: 3rem;
+
+}
+
+/* End of Table Container */
+
+/* Footer */
+.footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #2C3333;
+    color: white;
+    font-size: 1.6rem;
+    font-weight: 900;
+    margin-top: 2rem;
+}
+
+
+.source a{
+    font-size: 1.6rem;
+    margin-right: 3rem;
+    color: white;
+}
+.source a:hover{
+    color: #DF7861;
+}
+
+.convert-btn{
+    padding: 1rem 3rem;
+    background-color: #2C3333;
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    font-weight: 900;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+.convert-btn:hover{
+    background-color: #CFD2CF;
+    color: #DF7861;
+}
