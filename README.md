@@ -56,4 +56,4 @@
 ## This project is presented to you by:
 
 - [Mahmoud Hammad](https://github.com/mahmoudhammad309)
-- [Ahmed Abu Sharar](https://github.com/fadezak100)
+- [Fadi Zaqout](https://github.com/fadezak100)
