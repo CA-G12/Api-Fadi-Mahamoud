@@ -1,18 +1,6 @@
 const table = document.getElementById("table");
-
-let obj = {
-  name: "btc",
-  symbol: "btc",
-  price: "$1,000,000",
-  price_change_24h: "$1,000,000",
-  price_change_24h_percentage: "100%",
-  market_cap: "$1,000,000",
-  total_supply: "$1,000,000",
-};
-
-// for (let i = 0; i < 5; i++) {
-//   tableRow(obj);
-// }
+const searchBar = document.getElementById("searchBar");
+const searchBtn = document.getElementById("searchBtn");
 
 function tableRow(obj) {
   let tableRow = document.createElement("tr");
@@ -22,21 +10,40 @@ function tableRow(obj) {
     let tableData = document.createElement("td");
     tableRow.appendChild(tableData);
   }
+
   let convertButton = document.createElement("a");
-  tableRow.children[0].innerHTML = obj.name;
-  tableRow.children[1].innerHTML = obj.symbol;
-  tableRow.children[2].innerHTML = obj.price;
-  tableRow.children[3].innerHTML = obj.price_change_24h;
-  tableRow.children[4].innerHTML = obj.price_change_24h_percentage;
-  tableRow.children[5].innerHTML = obj.market_cap;
+  tableRow.children[0].textContent = obj.name;
+  tableRow.children[1].textContent = obj.asset_id;
+  tableRow.children[2].textContent = obj.price_usd;
+  tableRow.children[3].textContent = obj.type_is_crypto  ? "Crypto" : "Fiat";
+  tableRow.children[4].textContent = obj.asset_id;
+  tableRow.children[5].textContent = obj.asset_id;
   tableRow.children[6].appendChild(convertButton);
   convertButton.classList.add("convert-btn");
   convertButton.textContent = "Convert";
 }
 
-//! The beginningEND of news page functionally
+//Searcihing for a coin
+searchBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    let searched = searchBar.value; 
+    table.textContent = "";
+    apiFunctions.search(searched);
+});
 
-//* The beginning of news DOM function
+function printNotFoundError(search){
+  let tableRow = document.createElement("tr");
+  table.appendChild(tableRow);
+  let tableData = document.createElement("td");
+  tableRow.appendChild(tableData);
+  tableData.classList.add("error");
+  tableData.textContent = `${search} Not Found, Search Again`;
+
+}
+
+
+
+//!! The beginning of news DOM function
 
 // ? Function to create tags
 const createElements = (tag) => {

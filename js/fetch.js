@@ -4,7 +4,7 @@ const fetch = (url, header, key, cb) => {
     if (xhr.readyState === 4) {
       if (xhr.status === 200) {
         let data = JSON.parse(xhr.responseText);
-        cb(data.data);
+        cb(data);
       } else {
         console.log("Error");
       }
@@ -15,3 +15,6 @@ const fetch = (url, header, key, cb) => {
   xhr.setRequestHeader(header, key);
   xhr.send();
 };
+
+
+
