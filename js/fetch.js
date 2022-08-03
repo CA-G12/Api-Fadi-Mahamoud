@@ -3,7 +3,7 @@ const fetch = (url, header, key, cb) => {
   xhr.onreadystatechange = () => {
     if (xhr.readyState === 4) {
       if (xhr.status === 200) {
-        let data = JSON.parse(xhr.responseText).data;
+        let data = JSON.parse(xhr.responseText);
         cb(data);
       } else {
         console.log("Error");
@@ -16,6 +16,5 @@ const fetch = (url, header, key, cb) => {
   xhr.send();
 };
 
-const url = "https://api.apilayer.com/financelayer/news";
 
-// fetch(url, "apikey", "sFQJHy5MrdOHJVDKJJdPPPCWGd2DisQX", cb);
+
