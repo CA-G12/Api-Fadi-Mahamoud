@@ -2,6 +2,7 @@ const table = document.getElementById("table");
 const searchBar = document.getElementById("searchBar");
 const searchBtn = document.getElementById("searchBtn");
 
+
 function tableRow(obj) {
   let tableRow = document.createElement("tr");
   table.appendChild(tableRow);
@@ -12,15 +13,29 @@ function tableRow(obj) {
   }
 
   let convertButton = document.createElement("a");
+  let firstInput = document.createElement('input');
+  let secondInput = document.createElement('input');
+
   tableRow.children[0].textContent = obj.name;
   tableRow.children[1].textContent = obj.asset_id;
-  tableRow.children[2].textContent = obj.price_usd;
-  tableRow.children[3].textContent = obj.type_is_crypto  ? "Crypto" : "Fiat";
-  tableRow.children[4].textContent = obj.asset_id;
-  tableRow.children[5].textContent = obj.asset_id;
+  tableRow.children[2].textContent = parseFloat(obj.price_usd).toFixed(5);
+  tableRow.children[3].textContent = obj.type_is_crypto ? "Crypto" : "Fiat";
+  firstInput.classList.add("table-input");
+  secondInput.classList.add("table-input");
+  firstInput.setAttribute('id', 'firstInput');
+  secondInput.setAttribute('id', 'secondInput');
+  tableRow.children[4].appendChild(firstInput); 
+  tableRow.children[5].appendChild(secondInput);
   tableRow.children[6].appendChild(convertButton);
   convertButton.classList.add("convert-btn");
-  convertButton.textContent = "Convert";
+  convertButton.textContent = "Calculate";
+  convertButton.addEventListener('click', (e)=>{
+    if(firstInput.value === ""){
+      firstInput.value = parseFloat(secondInput.value/obj.price_usd).toFixed(2);
+    } else {
+      secondInput.value = parseFloat(firstInput.value*obj.price_usd).toFixed(2);
+    }
+  });
 }
 
 //Searcihing for a coin
