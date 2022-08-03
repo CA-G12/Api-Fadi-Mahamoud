@@ -83,6 +83,7 @@ a{
 .content {
     display: flex;
     flex-wrap: wrap;
+    margin-bottom: 2rem;
 }
 
 .search-bar{
@@ -159,16 +160,21 @@ td{
 /* End of Table Container */
 
 /* Footer */
-.footer{
+.footer {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    background-color: #2C3333;
+    background-color: #2c3333;
     color: white;
     font-size: 1.6rem;
     font-weight: 900;
     margin-top: 2rem;
+    position: fixed;
+    width: 85%;
+    left: 50%;
+    bottom: 0rem;
+    transform: translate(-50%, 0);
 }
 
 
@@ -196,3 +202,41 @@ td{
     background-color: #CFD2CF;
     color: #DF7861;
 }
+
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:100);
+
+h1 {
+  font: 2em "Roboto", sans-serif;
+  margin-bottom: 40px;
+}
+
+#loading {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: #fff;
+  animation: spin 1s ease-in-out infinite;
+  -webkit-animation: spin 1s ease-in-out infinite;
+  color: #fff;
+  background-color: #df7861;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+@keyframes spin {
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes spin {
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+/* start spinner */
+
