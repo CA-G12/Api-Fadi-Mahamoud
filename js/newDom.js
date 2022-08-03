@@ -70,6 +70,8 @@ const AUTHORIZATION = "apikey";
 
 // ? looping over an array of objects and displaying data in DOM
 const renderNews = ({ data }) => {
+  const spinner = document.querySelector("#loading");
+  spinner.style.display = "none";
   data.forEach((obj) => card(obj));
 };
 
