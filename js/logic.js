@@ -1,7 +1,11 @@
+let urlCoin = "https://rest.coinapi.io/v1/assets";
+fetch(urlCoin, "X-CoinAPI-Key", "A4D523A5-3072-426D-B4AF-5D530DCAD4EA", cb);
 
 function cb(data){
     let newData = data.filter((el, i) => i < 17000 && el.type_is_crypto === 0); 
     localStorage.setItem("data", JSON.stringify(newData));
+    const spinner = document.querySelector("#loading");
+    spinner.style.display = "none";
     apiFunctions.listDefualt(newData);
 }
 
