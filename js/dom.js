@@ -106,4 +106,19 @@ const card = (obj) => {
   container.appendChild(parentDiv);
   return parentDiv;
 };
-//!! The end of news DOM function
+//!* The end of news DOM function
+
+//!* The beginning of rendering the news function
+const API_URL = "https://api.apilayer.com/financelayer/news";
+const API_KEY = "sFQJHy5MrdOHJVDKJJdPPPCWGd2DisQX";
+const AUTHORIZATION = "apikey";
+
+// ? looping over an array of objects and displaying data in DOM
+const renderNews = (data) => {
+  data.forEach((obj) => card(obj));
+};
+
+// fetch(API_URL, AUTHORIZATION, API_KEY, renderNews);
+//!* The END of rendering news function
+
+//! The END of news page functionally
