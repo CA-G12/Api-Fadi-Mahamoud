@@ -58,3 +58,8 @@ function printNotFoundError(search){
 
 
 
+let urlCoin = "https://rest.coinapi.io/v1/assets";
+fetch(urlCoin, "X-CoinAPI-Key", "A4D523A5-3072-426D-B4AF-5D530DCAD4EA", cb);
+
+
+
