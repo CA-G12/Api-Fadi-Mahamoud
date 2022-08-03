@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,700&display=swap");
 * {
   font-family: "Roboto", sans-serif;
 }
@@ -13,6 +13,7 @@ body {
 }
 a {
   text-decoration: none;
+  color: black;
 }
 
 /* Start header section*/
@@ -24,6 +25,7 @@ a {
   background-color: rgb(255, 255, 255);
   border-radius: 0.6rem;
   font-weight: 900;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .title {
   flex-direction: row;
@@ -85,6 +87,7 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .card h3 {
   color: #df7861;
