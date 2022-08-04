@@ -138,7 +138,7 @@ a {
   position: fixed;
   width: 85%;
   left: 50%;
-  bottom: 2rem;
+  bottom: 0rem;
   transform: translate(-50%, 0);
 }
 
