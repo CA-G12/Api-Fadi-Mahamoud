@@ -15,6 +15,3 @@ const fetch = (url, header, key, cb) => {
   xhr.setRequestHeader(header, key);
   xhr.send();
 };
-
-
-

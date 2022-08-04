@@ -65,7 +65,7 @@ const card = (obj) => {
 
 //!* The beginning of rendering the news function
 const API_URL = "https://api.apilayer.com/financelayer/news";
-const API_KEY = "sFQJHy5MrdOHJVDKJJdPPPCWGd2DisQX";
+const API_KEY = "a7jXDt3kEVgGGY3kWky2yTgleVSFMU5L";
 const AUTHORIZATION = "apikey";
 
 // ? looping over an array of objects and displaying data in DOM
